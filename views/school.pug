@@ -24,11 +24,11 @@ block content
   div(class= "container-fluid")
     div(class = "row")  
       each item,index in results
-        div(class= "col-sm-2", onclick=`buy(${index})`) #{item.schoolName}
-        div(class= "col-sm-2", onclick=`buy(${index})`) #{item.schoolLocation}
-        div(class= "col-sm-2", onclick=`buy(${index})`) #{item.schoolCourses}
+        div(class= "col-sm-2", onclick=`buy(${index})`) University: &nbsp; #{item.schoolName}
+        div(class= "col-sm-2", onclick=`buy(${index})`) State/City: &nbsp; #{item.schoolLocation}
+        div(class= "col-sm-2", onclick=`buy(${index})`) Courses:  &nbsp; #{item.schoolCourses}
 
-//-   script.
-//-     function buy(itemNum){
-//-       alert(`You purchased item ${itemNum+1}`)
-//-     }
+  script.
+    function buy(itemNum){
+      alert(`You purchased item ${itemNum+1}`)
+    }
